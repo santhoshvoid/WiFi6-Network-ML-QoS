@@ -2,6 +2,13 @@
 
 > A machine learning system that replaces static Wi-Fi scheduling with a traffic-aware optimizer — cutting end-to-end latency by **41.8%** and jitter by **52.8%**, with zero throughput tradeoff.
 
+## TL;DR
+
+• Built an ML-based Wi-Fi scheduler using NS-3  
+• Replaces static EDCA with traffic-aware allocation  
+• Reduces latency by 41% and jitter by 52%  
+• Uses Random Forest + real-time system integration  
+
 &nbsp;
 
 Wi-Fi 6 shipped with everything you'd need to serve mixed traffic well — OFDMA for parallel transmission, TWT for personalized device wake schedules, 1024-QAM for squeezing more bits per hertz. And yet the scheduling layer underneath all of it, EDCA, treats a 64-byte IoT sensor reading and a 1400-byte video frame identically. This project is a practical fix for that.
@@ -9,6 +16,16 @@ Wi-Fi 6 shipped with everything you'd need to serve mixed traffic well — OFDMA
 A multi-output Random Forest model, trained on 160 NS-3 simulation scenarios, jointly predicts the right Resource Units, traffic priority, TWT wake interval, and MCS index for every active flow simultaneously. Two lightweight heuristics handle the edge cases the model can't — an IoT starvation floor and a density-aware TWT scaler. The whole thing runs as a closed-loop scheduler integrated directly into the NS-3 simulation.
 
 Full paper: [📄 Research Paper](docs/IEEE_ML_QoS_Wifi6_Final.pdf)
+
+---
+
+## Why This Matters
+
+Modern Wi-Fi networks handle mixed traffic — video calls, streaming, IoT devices — 
+but current scheduling treats them the same. This leads to wasted bandwidth and poor latency.
+
+This project shows how ML can fix that.
+This approach can be applied to enterprise Wi-Fi, gaming networks, and IoT-heavy environments.
 
 ---
 
