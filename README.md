@@ -15,7 +15,7 @@ Wi-Fi 6 shipped with everything you'd need to serve mixed traffic well — OFDMA
 
 A multi-output Random Forest model, trained on 160 NS-3 simulation scenarios, jointly predicts the right Resource Units, traffic priority, TWT wake interval, and MCS index for every active flow simultaneously. Two lightweight heuristics handle the edge cases the model can't — an IoT starvation floor and a density-aware TWT scaler. The whole thing runs as a closed-loop scheduler integrated directly into the NS-3 simulation.
 
-Full paper: [📄 Research Paper](docs/IEEE_ML_QoS_Wifi6_Final.pdf)
+Full paper: [📄 Research Paper](docs/IEEE_ML_QoS_WiFi6_Final.pdf)
 
 ---
 
@@ -285,7 +285,7 @@ Traffic types: VoIP (160B @ 20ms), Video (1400B @ 40ms), HTTP (800B @ 100ms), VP
 
 This project is backed by a full IEEE-format research paper covering the problem formulation, system model, algorithmic design, and complete experimental results.
 
-[📄 Read the Paper](docs/IEEE_ML_QoS_Wifi6_Final.pdf)
+[📄 Read the Paper](docs/IEEE_ML_QoS_WiFi6_Final.pdf)
 
 Citation:
 ```
