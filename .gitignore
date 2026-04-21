@@ -8,3 +8,4 @@ build/
 .ipynb_checkpoints/
 ns3_output/
 *.log
+Local_text_for_you.txt.txt
